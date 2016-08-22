@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="recyclerModel"
+            type="com.test.my.samplebinding.viewmodel.RecyclerViewModel" />
+    </data>
+    <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:id="@+id/linearRecycler">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@{String.valueOf(recyclerModel.userID)}"
+            android:clickable="false"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="@{recyclerModel.title}"
+            android:clickable="false"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:text="@{recyclerModel.description}"
+            android:clickable="false"/>
+    </LinearLayout>
+</layout>
